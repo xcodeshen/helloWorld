@@ -39,6 +39,9 @@ public class BaseApi {
         return view;
     }
 
+    public static void main(String[] args){
+    	System.out.println("add by shenjun");
+    }
     protected LoginInfo validationOperatorKey(String operatorKey){
         if(redisTemplate.hasKey(Constents.REDIS_LOGIN_MAP+operatorKey)){
             LoginInfo info = (LoginInfo) redisTemplate.boundValueOps(Constents.REDIS_LOGIN_MAP+operatorKey).get();
